@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eng. Abdelrhman Ahmed | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables & Theme */
+        :root {
+            --primary: #2563EB;
+            --secondary: #60A5FA;
+            --accent: #0EA5E9;
+            --bg-white: #FFFFFF;
+            --bg-light: #F8FAFC;
+            --text-main: #0F172A;
+            --text-light: #475569;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 10px 30px -5px rgba(37, 99, 235, 0.1);
+            --shadow-lg: 0 20px 40px -5px rgba(37, 99, 235, 0.2);
+            --shadow-glow: 0 0 30px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.7;
+            /* Engineering Grid Background */
+            background-image: 
+                linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        section {
+            padding: 120px 5%;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 4rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin: 15px auto 0;
+            border-radius: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(circle at top right, rgba(96, 165, 250, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.05) 0%, transparent 40%);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-text h1 {
+            font-size: 4.2rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero-text h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #1d4ed8);
+            color: white;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);
+        }
+
+        .btn-outline {
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            color: var(--primary);
+            border: 2px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile-img-container {
+            width: 400px; 
+            height: 400px; 
+            border-radius: 50%;
+            padding: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            box-shadow: var(--shadow-glow);
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            top: -15px; left: -15px; right: -15px; bottom: -15px;
+            border: 2px dashed rgba(37, 99, 235, 0.4);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Zoomed and centered directly on the face profile */
+            object-position: center 22%; 
+            border: 8px solid var(--bg-white);
+            background-color: var(--bg-light);
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--bg-white);
+            border-radius: 40px;
+            box-shadow: 0 -20px 40px rgba(0,0,0,0.02);
+            margin-top: -40px;
+            z-index: 10;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 1.8rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            padding: 2.5rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid rgba(37, 99, 235, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card:hover::after {
+            opacity: 1;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Grad Project Section */
+        #grad-project {
+            background-color: var(--bg-light);
+        }
+
+        .grad-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .grad-img-container {
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .grad-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .grad-img-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .grad-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .grad-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: var(--bg-white);
+            border-radius: 40px;
+            box-shadow: 0 -20px 40px rgba(0,0,0,0.02);
+            z-index: 10;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-light);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-white);
+        }
+
+        .project-img-wrapper {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.08);
+        }
+
+        .project-content {
+            padding: 2.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .project-desc {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Interactive Modal (Popup) Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--bg-white);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            border-radius: 24px;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background: rgba(15, 23, 42, 0.7);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background: #ef4444;
+            transform: rotate(90deg);
+        }
+
+        .modal-media {
+            width: 100%;
+            min-height: 200px;
+            background: #f1f5f9; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .modal-media img.single-img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: contain; 
+            padding: 20px;
+        }
+
+        /* Gallery Grid Styles inside Modal (Images & Videos) */
+        .modal-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            background: #f8fafc;
+        }
+
+        .modal-gallery-item {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal-gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .modal-gallery-item img, 
+        .modal-gallery-item video {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 0;
+            background: #e2e8f0;
+        }
+
+        .modal-gallery-item h4 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .modal-body {
+            padding: 3rem;
+        }
+
+        .modal-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .modal-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .modal-section-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: var(--bg-light);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            background: rgba(37, 99, 235, 0.1);
+            width: 50px; height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--bg-white);
+            border-radius: 40px;
+            box-shadow: 0 -20px 40px rgba(0,0,0,0.02);
+            z-index: 10;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+            padding: 3rem 2rem;
+            background: var(--bg-light);
+            border-radius: 24px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .contact-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-10px);
+            border-color: rgba(37, 99, 235, 0.2);
+            background: white;
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content, .about-grid, .grad-wrapper {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .grad-wrapper {
+                padding: 2rem;
+            }
+            .hero-text {
+                text-align: center;
+                order: 2;
+            }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 2.5rem; }
+            .btn-group { justify-content: center; }
+            .hero-image {
+                order: 1;
+                margin-top: 80px;
+            }
+            .profile-img-container {
+                width: 280px;
+                height: 280px;
+            }
+            .modal-body { padding: 2rem; }
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Eng. Abdelrhman Ahmed</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#grad-project">Grad Project</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <h1>Hi, I'm <br>Abdelrhman Ahmed Hamam</h1>
+                <h2>Robotics & Autonomous Systems Engineer</h2>
+                <p>Specializing in industrial automation, embedded systems, and smart manufacturing. Building the future of Industry 4.0 through precise engineering and innovative control algorithms.</p>
+                <div class="btn-group">
+                    <a href="#grad-project" class="btn btn-primary"><i class="fas fa-project-diagram"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-address-card"></i> Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image reveal">
+                <div class="profile-img-container">
+                    <img src="PROFILE3.jpeg" alt="Abdelrhman Ahmed Hamam" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title reveal">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>As a highly motivated Robotics and Autonomous Systems Engineer, I bridge the gap between mechanical design, electronic hardware, and intelligent software. My core focus lies in developing systems that optimize industrial workflows and autonomous operations.</p>
+                    <p>I have extensive hands-on experience with PLC Programming, Embedded Systems (Arduino, ESP32), and Smart Manufacturing principles. From developing precise multi-axis robotic arms to architecting complete Industry 4.0 automated production lines, I am passionate about engineering solutions that matter.</p>
+                </div>
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Core Fields</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Tech Stacks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4.0</div>
+                        <div class="stat-label">Industry Focus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="grad-project">
+        <div class="container">
+            <h2 class="section-title reveal">Graduation Project</h2>
+            <div class="grad-wrapper reveal">
+                <div class="grad-img-container">
+                    <img src="GRADUATION PROJECT.jpeg" alt="Automated PCB Production Line">
+                </div>
+                <div class="grad-text">
+                    <h3>Automated PCB Production Line</h3>
+                    <p>Designed a complete smart factory solution integrating automated PCB manufacturing, assembly, inspection, and production management. This comprehensive system mimics real-world Industry 4.0 environments, utilizing a network of sensors and ESP32 microcontrollers to automate the entire lifecycle of a printed circuit board.</p>
+                    <div class="tags">
+                        <span class="tag">Industry 4.0</span>
+                        <span class="tag">ESP32</span>
+                        <span class="tag">Octopus Board</span>
+                        <span class="tag">CNC</span>
+                        <span class="tag">Pick & Place</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="openModal(
+                                'gallery', 
+                                [
+                                    { type: 'video', url: 'PROJECT.mp4', caption: 'System Overview' },
+                                    { type: 'image', url: 'GRADUATION PROJECT.jpeg', caption: '3D Assembly Design' },
+                                    { type: 'video', url: 'CNC.mp4', caption: 'CNC Paste Dispenser' },
+                                    { type: 'image', url: 'CNC.jpeg', caption: 'CNC Mechanical 3D' },
+                                    { type: 'video', url: 'PNP.mp4', caption: 'Pick & Place' },
+                                    { type: 'image', url: 'PNP.jpeg', caption: 'P&P Mechanical 3D' },
+                                    { type: 'video', url: 'REFLOW OVEN.mp4', caption: 'Reflow Oven' },
+                                    { type: 'image', url: 'REFLOW OVEN.jpeg', caption: 'Oven Mechanical 3D' },
+                                    { type: 'video', url: 'CONVEYOR.mp4', caption: 'Conveyor System' },
+                                    { type: 'image', url: 'CONEYOR.jpeg', caption: 'Conveyor Mechanical 3D' },
+                                    { type: 'image', url: 'CONTROL BOX.jpeg', caption: 'Control Panel Wiring' },
+                                    { type: 'image', url: 'PROJECT IN REAL.jpeg', caption: 'Hardware Execution Setup' }
+                                ], 
+                                'Graduation Project: Automated PCB Production Line', 
+                                'Industry 4.0, ESP32, Octopus Board, CNC, Pick & Place', 
+                                'Designed a complete smart factory solution integrating automated PCB manufacturing, assembly, inspection, and production management. This comprehensive system mimics real-world Industry 4.0 environments, utilizing a network of sensors and ESP32 microcontrollers to automate the entire lifecycle of a printed circuit board.', 
+                                'Customer orders trigger automated workflows through a centralized smart ordering system. A network of ESP32 microcontrollers coordinates the overall production line, while a dedicated Octopus board reliably drives the Pick & Place station for precise component mounting. Automated conveyors seamlessly bridge the CNC, PnP, and Reflow stations, ensuring synchronized product transportation.'
+                            )">View Full Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <video src="WhatsApp Video 2026-05-31 at 3.20.55 AM.mp4" preload="metadata" poster="WhatsApp Image 2026-05-31 at 3.19.08 AM.jpeg" autoplay loop muted playsinline class="project-img"></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smartphone Controlled Mobile Robot</h3>
+                        <p class="project-desc">Designed and developed a Bluetooth-controlled mobile robot using Arduino and wireless communication technologies.</p>
+                        <div class="tags">
+                            <span class="tag">Arduino</span>
+                            <span class="tag">Bluetooth</span>
+                        </div>
+                        <button class="btn btn-outline" style="width: 100%;" 
+                            onclick="openModal(
+                                'image', 
+                                'WhatsApp Image 2026-05-31 at 3.19.08 AM.jpeg', 
+                                'Smartphone Controlled Mobile Robot', 
+                                'Arduino, Bluetooth, Motor Drivers, Embedded Systems, Mobile App', 
+                                'Designed and developed a highly responsive Bluetooth-controlled mobile robot. The system leverages Arduino microcontrollers integrated with robust wireless communication modules to achieve real-time navigation and precise motor control.', 
+                                'A custom-designed smartphone application transmits encoded directional commands via Bluetooth. The onboard Arduino parses these signals instantly, translating them into PWM outputs for the L298N motor drivers, ensuring smooth acceleration and directional changes across varying terrains.'
+                            )">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <video src="WhatsApp Video 2026-05-31 at 3.19.38 AM.mp4" preload="metadata" poster="WhatsApp Image 2026-05-31 at 3.19.06 AM.jpeg" autoplay loop muted playsinline class="project-img"></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Autonomous Line Following Robot</h3>
+                        <p class="project-desc">Developed an autonomous robot capable of accurately tracking predefined paths using high-speed infrared sensing.</p>
+                        <div class="tags">
+                            <span class="tag">Arduino</span>
+                            <span class="tag">IR Sensors</span>
+                        </div>
+                        <button class="btn btn-outline" style="width: 100%;" 
+                            onclick="openModal(
+                                'image', 
+                                'WhatsApp Image 2026-05-31 at 3.19.06 AM.jpeg', 
+                                'Autonomous Line Following Robot', 
+                                'Arduino, IR Sensors, Closed-loop Control, Embedded C', 
+                                'Developed an autonomous line-following robot optimized for high-speed tracking and sharp turn maneuvering. The project demonstrates advanced closed-loop control systems using infrared sensing arrays to maintain perfect trajectory.', 
+                                'An array of IR sensors continuously scans the ground for line contrast. The sensor data is fed into a continuous control algorithm running on the Arduino. This algorithm calculates the precise error margin and dynamically adjusts the differential speed of the DC motors, allowing the robot to track complex paths without derailment.'
+                            )">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <video src="WhatsApp Video 2026-05-31 at 4.12.09 PM.mp4" preload="metadata" poster="WhatsApp Image 2026-05-31 at 3.19.13 AM.jpeg" autoplay loop muted playsinline class="project-img"></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Color Sorting Machine</h3>
+                        <p class="project-desc">Designed an automated machine capable of identifying and rapidly sorting objects based on color signatures.</p>
+                        <div class="tags">
+                            <span class="tag">Color Sensors</span>
+                            <span class="tag">Actuators</span>
+                        </div>
+                        <button class="btn btn-outline" style="width: 100%;" 
+                            onclick="openModal(
+                                'image', 
+                                'WhatsApp Image 2026-05-31 at 3.19.13 AM.jpeg', 
+                                'Automated Color Sorting Machine', 
+                                'TCS3200 Color Sensors, Automation, Arduino, Servo Actuators', 
+                                'Engineered a fully automated color sorting machine designed to classify and segregate objects based on precise RGB color signatures, mimicking real-world industrial sorting applications.', 
+                                'A high-precision color sensor illuminates the object and reads the reflected light frequencies to identify the color. The microcontroller processing this data triggers specific servo motors, physically redirecting the object down the corresponding sorting chute with high accuracy and speed.'
+                            )">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="WhatsApp Image 2026-05-31 at 3.19.39 AM (1).jpeg" alt="Robotic Arm" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multi-DOF Robotic Arm</h3>
+                        <p class="project-desc">Designed a multi-degree-of-freedom robotic arm engineered for precision pick-and-place industrial operations.</p>
+                        <div class="tags">
+                            <span class="tag">Stepper Motors</span>
+                            <span class="tag">Motion Control</span>
+                        </div>
+                        <button class="btn btn-outline" style="width: 100%;" 
+                            onclick="openModal(
+                                'image', 
+                                'WhatsApp Image 2026-05-31 at 3.19.39 AM (1).jpeg', 
+                                'Multi-DOF Robotic Arm', 
+                                'Stepper Motors, Inverse Kinematics, Motion Control, CAD Design', 
+                                'Designed and fabricated a multi-degree-of-freedom robotic arm engineered for industrial pick-and-place operations. The project focuses on mechanical kinematics and precise motion control mapping.', 
+                                'The arm utilizes high-torque stepper motors governed by custom motion algorithms. This setup allows the end-effector to achieve exact Cartesian coordinates in 3D space. Smooth motion profiling (acceleration/deceleration) ensures careful handling of the manipulated payloads.'
+                            )">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <video src="WhatsApp Video 2026-05-31 at 3.57.11 PM.mp4" preload="metadata" poster="WhatsApp Image 2026-05-31 at 3.45.37 AM.jpeg" autoplay loop muted playsinline class="project-img"></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PLC Bottle Filling System</h3>
+                        <p class="project-desc">Developed an industrial automation system for liquid filling and capping utilizing industrial-grade PLC logic.</p>
+                        <div class="tags">
+                            <span class="tag">PLC</span>
+                            <span class="tag">Ladder Logic</span>
+                        </div>
+                        <button class="btn btn-outline" style="width: 100%;" 
+                            onclick="openModal(
+                                'image', 
+                                'WhatsApp Image 2026-05-31 at 3.45.37 AM.jpeg', 
+                                'PLC Bottle Filling System', 
+                                'Programmable Logic Controller (PLC), Industrial Proximity Sensors, Ladder Logic, Conveyor Systems', 
+                                'Developed an industrial-grade automated liquid filling and capping system, showcasing practical applications of Programmable Logic Controllers (PLCs) in modern manufacturing environments.', 
+                                'The PLC acts as the central brain, continuously monitoring inputs from industrial proximity and photoelectric sensors along the conveyor. Utilizing complex Ladder Logic, it precisely sequences the starting and stopping of the conveyor, activates solenoid valves for volumetric liquid filling, and engages the capping mechanism.'
+                            )">View Details</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></span>
+            <div class="modal-media" id="modal-media-container">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="modal-title">Project Title</h3>
+                <div class="modal-tech" id="modal-tech">
+                </div>
+                <h4 class="modal-section-title"><i class="fas fa-info-circle"></i> Project Overview</h4>
+                <p class="modal-text" id="modal-desc">Description goes here.</p>
+                <h4 class="modal-section-title"><i class="fas fa-cogs"></i> Engineering & Mechanism</h4>
+                <p class="modal-text" id="modal-how">How it works goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">Technical Expertise</h2>
+            <div class="skills-grid reveal">
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-robot"></i></div><span class="skill-name">Robotics Engineering</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-microchip"></i></div><span class="skill-name">Embedded Systems</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-cogs"></i></div><span class="skill-name">PLC Programming</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-industry"></i></div><span class="skill-name">Industrial Automation</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-network-wired"></i></div><span class="skill-name">Industry 4.0</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-wave-square"></i></div><span class="skill-name">Sensors & Actuators</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-code-branch"></i></div><span class="skill-name">Arduino & ESP32</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-gamepad"></i></div><span class="skill-name">Motion Control</span></div>
+                <div class="skill-card"><div class="skill-icon"><i class="fas fa-compress-arrows-alt"></i></div><span class="skill-name">CNC Systems</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Email Address</h4>
+                            <p style="color: var(--text-light); font-weight: 500; font-size: 1.05rem;">abdoahmed22122003@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Phone Number</h4>
+                            <p style="color: var(--text-light); font-weight: 500; font-size: 1.05rem;">01115466159</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; margin-bottom: 8px;">LinkedIn Profile</h4>
+                            <p style="color: var(--text-light); font-weight: 500; font-size: 1.05rem;">/in/abdelrhman-hamam</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="linkedin-section" style="background-color: var(--bg-white); border-radius: 40px; box-shadow: 0 -20px 40px rgba(0,0,0,0.02); z-index: 10; padding: 80px 5%; text-align: center;">
+        <div class="container">
+            <h2 class="section-title reveal">Professional Network</h2>
+            <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;" class="reveal">
+                Let's connect on LinkedIn to discuss robotics, industrial automation, and engineering collaborations.
+            </p>
+            <a href="https://www.linkedin.com/in/abdelrhman-ahmed-hamam-b8b98b310" target="_blank" class="btn btn-primary reveal" style="font-size: 1.3rem; padding: 20px 50px; border-radius: 20px; display: inline-flex; align-items: center; gap: 15px;">
+                <i class="fab fa-linkedin" style="font-size: 1.6rem;"></i> Connect on LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdelrhman-ahmed-hamam-b8b98b310" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+        </div>
+        <p style="color: #64748b; font-size: 0.95rem;">&copy; 2026 Eng. Abdelrhman Ahmed Hamam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add("active");
+                    }
+                });
+            };
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); 
+        });
+
+        // Modal (Popup) Logic
+        const modalOverlay = document.getElementById('project-modal');
+        const mediaContainer = document.getElementById('modal-media-container');
+        
+        function openModal(type, mediaData, title, tags, desc, howItWorks) {
+            // Set Text Content
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-how').innerText = howItWorks;
+            
+            // Set Tags
+            const tagsArray = tags.split(', ');
+            let tagsHTML = '';
+            tagsArray.forEach(tag => {
+                tagsHTML += `<span class="tag">${tag}</span>`;
+            });
+            document.getElementById('modal-tech').innerHTML = tagsHTML;
+
+            // Handle Gallery vs Single Display
+            if (type === 'gallery' && Array.isArray(mediaData)) {
+                let html = '<div class="modal-gallery-grid">';
+                mediaData.forEach(item => {
+                    html += `<div class="modal-gallery-item">`;
+                    if (item.type === 'video') {
+                        html += `<video src="${item.url}" autoplay loop muted playsinline></video>`;
+                    } else {
+                        html += `<img src="${item.url}" alt="${item.caption}">`;
+                    }
+                    html += `<h4>${item.caption}</h4></div>`;
+                });
+                html += '</div>';
+                mediaContainer.innerHTML = html;
+            } else if (type === 'video') {
+                mediaContainer.innerHTML = `<video src="${mediaData}" controls autoplay playsinline></video>`;
+            } else {
+                mediaContainer.innerHTML = `<img src="${mediaData}" alt="${title}" class="single-img">`;
+            }
+
+            // Show Modal
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+            
+            setTimeout(() => {
+                mediaContainer.innerHTML = ''; 
+            }, 400); 
+        }
+
+        // Close modal when clicking outside of it
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
